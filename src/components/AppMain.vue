@@ -45,11 +45,17 @@ const showProp = () => {
 
 <style scoped>
   button {
-    border-radius: 4rem;
+    background-color: #85C6D4;
+    color: #172D31;
+    border-radius: 0.25rem;
     font-family: monospace;
     font-size: 1.33rem;
     font-weight: bold;
     padding: 0.33rem 0.75rem;
+  }
+
+  button:hover {
+    background-color: #AED9E3;
   }
 
   div {

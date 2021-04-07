@@ -16,7 +16,7 @@ defineProps({
 <style scoped>
 
   footer {
-    color: #D6ECF0;
+    color: #458694;
     font-size: 0.75rem;    
     font-style: italic;
   }

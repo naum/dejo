@@ -27,12 +27,16 @@ const uba = reactive({
 
 const hi = () => {
   console.log('changing league name')
-  uba.name = 'New and Improved UBA'
-  console.log('Total teams: ' + uba.teams.length)
+  uba.name = rollRandString()
 }
 
 const hiAgain = () => {
   console.log("here we are again.")
+}
+
+const rollRandString = () => {
+  const x = Math.random()
+  return x.toString(36).slice(-6).toUpperCase()
 }
 
 provide('uba', uba)
@@ -41,6 +45,10 @@ provide('uba', uba)
 
 <style>
 /* BASE COLOR: #5CB2C5 */
+body {
+  color:  #EFF8FA;
+  background-color: #172D31;
+}
 #app {
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
@@ -48,7 +56,6 @@ provide('uba', uba)
   font-size: 133.33%;
   line-height: 1.33rem;
   text-align: center;
-  color: #172D31;
   margin-top: 3rem;
 }
 </style>
