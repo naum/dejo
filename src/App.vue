@@ -36,7 +36,7 @@ const hiAgain = () => {
 
 const rollRandString = () => {
   const x = Math.random()
-  return x.toString(36).slice(-6).toUpperCase()
+  return x.toString(36).slice(-8).toUpperCase()
 }
 
 provide('uba', uba)
