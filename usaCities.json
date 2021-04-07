@@ -1,0 +1,6 @@
+{ "cities": [
+    "Atlanta", "Boston", "Chicago", "Denver", "Detroit", 
+    "Houston", "Indianapolis", "Pittsburgh", "New York",
+    "Seattle", "Washington"
+  ]
+}

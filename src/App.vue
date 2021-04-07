@@ -1,7 +1,7 @@
 <template>
   <AppHeader title="dejo" />
   <AppMain 
-    message="a simple counter" 
+    message="a simple counter and id generator" 
     @changename="hi()"
     @ping="hiAgain()"
     :maxteamOpt="[8,20,32]"
@@ -45,10 +45,6 @@ provide('uba', uba)
 
 <style>
 /* BASE COLOR: #5CB2C5 */
-body {
-  color:  #EFF8FA;
-  background-color: #172D31;
-}
 #app {
   font-family: monospace;
   -webkit-font-smoothing: antialiased;

@@ -15,6 +15,7 @@ defineProps({
 
   h1 {
     font-size: 3.16rem;    
+    font-weight: bold;
   }
 
 </style>
