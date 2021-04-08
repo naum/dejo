@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { inject, defineEmit, defineProps, reactive } from 'vue'
+import { inject, defineEmit, defineProps, onMounted, reactive, watch } from 'vue'
 import usaCities from '../../usaCities.json'
 
 const prop = defineProps({
@@ -37,6 +37,10 @@ const pingDaddy = (e) => {
   emit('ping')
 }
 
+watch(league, () => {
+  console.log("league changed!")
+})
+
 console.log('prop from setup: ' + prop.message)
 console.log('prop from setup 2: ' + prop.maxteamOpt)
 
@@ -49,16 +53,21 @@ const showProp = () => {
 }
 
 const shuffle = (array) => {
-    let counter = array.length;
-    while (counter > 0) {
-        let index = Math.floor(Math.random() * counter);
-        counter--;
-        let temp = array[counter];
-        array[counter] = array[index];
-        array[index] = temp;
-    }
-    return array;
+  let counter = array.length;
+  while (counter > 0) {
+    let index = Math.floor(Math.random() * counter);
+    counter--;
+    let temp = array[counter];
+    array[counter] = array[index];
+    array[index] = temp;
+  }
+  return array;
 }
+
+onMounted(() => {
+  console.log("Let the games begin.")
+  console.log("SITENAME: " + import.meta.env.VITE_SITENAME)
+})
 
 </script>
 
